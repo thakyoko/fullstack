@@ -1,26 +1,13 @@
 <?php
 
-use Restserver\Libraries\REST_Controller;
-
-defined('BASEPATH') or exit('No direct script access allowed');
 
 // This can be removed if you use __autoload() in config.php OR use Modular Extensions
-/** @noinspection PhpIncludeInspection */
+defined('BASEPATH') or exit('No direct script access allowed');
 //To Solve File REST_Controller not found
+use Restserver\Libraries\REST_Controller;
 require APPPATH . 'libraries/REST_Controller.php';
 require APPPATH . 'libraries/Format.php';
 
-/**
- * This is an example of a few basic user interaction methods you could use
- * all done with a hardcoded array
- *
- * @package         CodeIgniter
- * @subpackage      Rest Server
- * @category        Controller
- * @author          Phil Sturgeon, Chris Kacerguis
- * @license         MIT
- * @link            https://github.com/chriskacerguis/codeigniter-restserver
- */
 class Example extends REST_Controller
 {
 
@@ -47,6 +34,8 @@ class Example extends REST_Controller
 
         $id = $this->get('id');
 
+        echo $id;
+        return;
         $this->load->model('News_model');
         $this->News_model->getStd($id);
         

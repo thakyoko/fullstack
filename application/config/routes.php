@@ -59,5 +59,5 @@ $route['translate_uri_dashes'] = FALSE;
 | -------------------------------------------------------------------------
 */
 
-$route['api/([a-z0-9]+)/(\d+)'] = "api/$1/users/$2";
-$route['api/users/(:num)'] = 'api/users_get/$1'; // Example 4
+$route['api'] = "api/welcome";
+$route['api/([a-z0-9]+)/(\d+)'] = "api/$1/$2";
